@@ -4,25 +4,47 @@
     <meta charset="UTF-8">
     <title>Exercici1</title>
 </head>
-<body>
-<scrip>
 
-    <!--    Feu una funció anomenada calculaPuntuacio que admeti com a paràmetre un objecte
+<script>
+
+/*      Feu una funció anomenada calculaPuntuacio que admeti com a paràmetre un objecte
     amb puntuacions de persones, com per exemple el següent:
 
         const scoreBoard = {
-        'Dave Thomas': 44,
-        'Freyja Ćirić': 539,
-        'José Valim': 265,
+            'Dave Thomas': 44,
+            'Freyja Ćirić': 539,
+            'José Valim': 265,
         };
 
-        i retorni la puntuació mitjana total,-->
+    i retorni la puntuació mitjana total,*/
 
 
+//Funcion Crear tabla de puntuacion (scoreBoard)
 
+const scoreBoard = {
+    'Dave Thomas': 44,
+    'Freyja Ćirić': 539,
+    'José Valim': 265,
+};
 
+let sum = 0;
+let avg = 0;
 
+function calculaPuntuacio(scoreBoard){
 
-</scrip>
+    for (let key in scoreBoard) {
+        sum += scoreBoard[key];
+        avg = sum/3
+    }
+
+}
+calculaPuntuacio(scoreBoard);
+
+alert(avg);
+
+</script>
+
+<body>
+
 </body>
 </html>
