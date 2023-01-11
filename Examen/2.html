@@ -18,26 +18,24 @@
         };
 
 
-        //Mostrar totes les dades
-    function showscoreBoard(scoreBoard){
+    //     //Mostrar totes les dades
+    // function showscoreBoard(scoreBoard){
+    //
+    //     for(let key in scoreBoard) {
+    //         console.log(key,' : ',scoreBoard[key]);
+    //     }
+    // }
+    //
+    // showscoreBoard(scoreBoard);
 
-        for(let key in scoreBoard) {
-            console.log(key,' : ',scoreBoard[key]);
+    //Mostrar dades sense  la clau
+
+    function sense(XscoreBoard, key) {
+        if (XscoreBoard.hasOwnProperty(key)) {
+            delete XscoreBoard[key];
         }
+        return XscoreBoard;
     }
-
-    showscoreBoard(scoreBoard);
-
-    //Mostrar dades sense la clau
-
-    function sense(scoreBoard, key) {
-        if (scoreBoard.hasOwnProperty(key)) {
-            delete scoreBoard[key];
-        }
-        return scoreBoard;
-    }
-
-    sense(scoreBoard);
 
     </script>
 
