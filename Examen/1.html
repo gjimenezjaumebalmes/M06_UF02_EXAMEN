@@ -29,12 +29,15 @@ const scoreBoard = {
 
 let sum = 0;
 let avg = 0;
+let contador = 0;
 
+// Funcio calcular puntuació
 function calculaPuntuacio(scoreBoard){
 
     for (let key in scoreBoard) {
         sum += scoreBoard[key];
-        avg = sum/3
+        contador++; // contador
+        avg = sum/contador // mitjana
     }
 
 }

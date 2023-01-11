@@ -17,6 +17,8 @@
             'José Valim': 265,
         };
 
+
+        //Mostrar totes les dades
     function showscoreBoard(scoreBoard){
 
         for(let key in scoreBoard) {
@@ -26,16 +28,16 @@
 
     showscoreBoard(scoreBoard);
 
+    //Mostrar dades sense la clau
 
-    function sense(scoreBoard, ‘Dave Thomas’){
-
-        for(let key in scoreBoard) {
-            console.log(key,' : ',scoreBoard[key]);
+    function sense(scoreBoard, key) {
+        if (scoreBoard.hasOwnProperty(key)) {
+            delete scoreBoard[key];
         }
+        return scoreBoard;
     }
 
     sense(scoreBoard);
-
 
     </script>
 
