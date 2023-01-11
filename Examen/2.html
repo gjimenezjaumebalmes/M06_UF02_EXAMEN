@@ -18,24 +18,29 @@
         };
 
 
-    //     //Mostrar totes les dades
-    // function showscoreBoard(scoreBoard){
-    //
-    //     for(let key in scoreBoard) {
-    //         console.log(key,' : ',scoreBoard[key]);
-    //     }
-    // }
-    //
-    // showscoreBoard(scoreBoard);
+        //Mostrar totes les dades
+     function showscoreBoard(scoreBoard){
+
+       for(let key in scoreBoard) {
+           console.log(key,' : ',scoreBoard[key]);
+        }
+     }
+
+     showscoreBoard(scoreBoard);
 
     //Mostrar dades sense  la clau
 
-    function sense(XscoreBoard, key) {
-        if (XscoreBoard.hasOwnProperty(key)) {
-            delete XscoreBoard[key];
+    // Mostrar dades sense clau
+    function sense (XscoreBoard, key){
+        for (i in XscoreBoard) {
+            if (i == key){
+                delete XscoreBoard[key]
+                return XscoreBoard
+            }
         }
-        return XscoreBoard;
     }
+
+    console.log(sense(scoreBoard, "Dave Thomas"))
 
     </script>
 
