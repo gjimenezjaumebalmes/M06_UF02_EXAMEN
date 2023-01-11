@@ -4,15 +4,42 @@
     <meta charset="UTF-8">
     <title>Exercici2</title>
 </head>
-<body>
-<scrip>
 
-<!--    Feu una funció anomenada sense, que admeti com a paràmetre un objecte qualsevol
-    i el nom d’una clau. Ha de retornar l’objecte passat sense la clau i valor que coincideixi
-    amb el paràmetre. (2  punts)-->
+    <script>
+
+    /*    Feu una funció anomenada sense, que admeti com a paràmetre un objecte qualsevol
+        i el nom d’una clau. Ha de retornar l’objecte passat sense la clau i valor que coincideixi
+        amb el paràmetre. (2  punts)*/
+
+        const scoreBoard = {
+            'Dave Thomas': 44,
+            'Freyja Ćirić': 539,
+            'José Valim': 265,
+        };
+
+    function showscoreBoard(scoreBoard){
+
+        for(let key in scoreBoard) {
+            console.log(key,' : ',scoreBoard[key]);
+        }
+    }
+
+    showscoreBoard(scoreBoard);
 
 
+    function sense(scoreBoard, ‘Dave Thomas’){
 
-</scrip>
-</body>
-</html>
+        for(let key in scoreBoard) {
+            console.log(key,' : ',scoreBoard[key]);
+        }
+    }
+
+    sense(scoreBoard);
+
+
+    </script>
+
+    <body>
+
+    </body>
+    </html>
