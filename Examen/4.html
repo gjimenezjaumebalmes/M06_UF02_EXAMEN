@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Exercici2</title>
+    <title>Exercici4</title>
 </head>
 
 <script>
@@ -15,7 +15,36 @@
     posarem un 1, si no, posarem un 0.
 */
 
+class MatriuBinaria extends Matriu {
+    constructor(width, height, list, x) {
 
+        super(width, height, list);
+
+        this.x = x;
+
+    }
+
+    print() {
+        for (let i = 0; i < this.height; i++) {
+
+            let row = this.llista.slice(i * this.width, (i + 1) * this.width)
+
+                .map(this.x)
+                .map(x => x ? 1 : 0);
+
+            console.log(row);
+
+        }
+    }
+
+    static fromArray(width, height, list, boolean) {
+
+        let data = list.map(boolean).map(x => x ? 0 : 1);
+
+        return new MatriuBinaria(width, height, data, boolean);
+
+    }
+}
 
 
 </script>
